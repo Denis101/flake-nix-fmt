@@ -34,21 +34,22 @@
     }
     // flake-utils.lib.eachDefaultSystem (system: let
       pkgs = import nixpkgs {inherit system;};
-      fmt-check = pkgs.stdenvNoCC.mkDerivation {
-        name = "fmt-check";
-        src = ./.;
-        dontBuild = true;
-        doCheck = true;
-        nativeBuildInputs = with pkgs; [alejandra];
-        checkPhase = ''
-          alejandra -c .
-        '';
-        installPhase = ''
-          mkdir "$out"
-        '';
-      };
     in {
-      checks = {inherit fmt-check;};
       formatter = pkgs.alejandra;
+      checks = {
+        fmt = pkgs.stdenvNoCC.mkDerivation {
+          name = "fmt";
+          src = ./.;
+          dontBuild = true;
+          doCheck = true;
+          nativeBuildInputs = with pkgs; [alejandra];
+          checkPhase = "alejandra -c .";
+          installPhase = "mkdir \"$out\"";
+        };
+      };
+
+      devShells.default = pkgs.mkShellNoCC {
+        packages = with pkgs; [alejandra];
+      };
     });
 }
