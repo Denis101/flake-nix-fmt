@@ -12,6 +12,7 @@
 {% for tag in tags | sort(reverse=True) %}
 - :label: `{{tag}}` {% if loop.index == 1 %}:sparkle: {% endif %}
 {% endfor %}
+
 {% endif %}
 
 ## Inputs
