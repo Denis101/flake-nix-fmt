@@ -3,8 +3,8 @@
 ![nix actions](https://github.com/denis101/flake-nix-fmt/actions/workflows/nix.yml/badge.svg)
 
 - :page_with_curl: Nix formatter & checks
-- :watch: Last updated at Thu Apr 24 13:09:25 2025
-- :hash: `sha256-EZTir89lI/VRZfdDd3To2IxS2G2VXMXeqTHW8OtuNRM=`
+- :watch: Last updated at Thu Apr 24 13:21:22 2025
+- :hash: `sha256-YA6Po62kyxXkXgsXEI9ZXpF+3jS7cTDiOyNKSd9Ri4M=`
 
 ## Inputs
 
@@ -53,9 +53,7 @@
 
 ### formatters
 
-- :pager: description
-- :pager: name
-- :pager: type
+- :pager: alejandra-4.0.0
 
 ### systems
 
