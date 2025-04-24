@@ -3,8 +3,8 @@
 ![nix actions](https://github.com/denis101/flake-nix-fmt/actions/workflows/nix.yml/badge.svg)
 
 - :page_with_curl: Nix formatter & checks
-- :watch: Last updated at Thu Apr 24 13:09:25 2025
-- :hash: `sha256-EZTir89lI/VRZfdDd3To2IxS2G2VXMXeqTHW8OtuNRM=`
+- :watch: Last updated at Thu Apr 24 13:11:19 2025
+- :hash: `sha256-+MVsCKKMn7FoqYnoQHQ/HLGI03FOFg9KKpzh74ayNbs=`
 
 ## Inputs
 
