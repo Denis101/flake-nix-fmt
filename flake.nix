@@ -49,7 +49,7 @@
         };
 
         actions = pkgs.mkShellNoCC {
-          packages = with pkgs; [j2cli];
+          packages = with pkgs; [j2cli jsonnet];
         };
       };
     });

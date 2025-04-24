@@ -3,15 +3,13 @@
 ![nix actions](https://github.com/denis101/flake-nix-fmt/actions/workflows/nix.yml/badge.svg)
 
 {% if nix_flake_metadata is defined %}
-<details>
-  <summary>nix flake metadata</summary>
-  {{nix_flake_metadata}}
+<details><summary>nix flake metadata</summary>
+{{nix_flake_metadata}}
 </details>
 {% endif %}
 
 {%if nix_flake_show is defined %}
-<details>
-  <summary>nix flake show</summary>
-  {{nix_flake_show}}
+<details><summary>nix flake show</summary>
+{{nix_flake_show}}
 </details>
 {% endif %}
