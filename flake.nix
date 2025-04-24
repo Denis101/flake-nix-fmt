@@ -43,8 +43,14 @@
         };
       };
 
-      devShells.default = pkgs.mkShellNoCC {
-        packages = with pkgs; [alejandra];
+      devShells = {
+        default = pkgs.mkShellNoCC {
+          packages = with pkgs; [alejandra];
+        };
+
+        actions = pkgs.mkShellNoCC {
+          packages = with pkgs; [jinja2-cli];
+        };
       };
     });
 }
