@@ -5,13 +5,13 @@
 <details><summary>nix flake metadata</summary>
 ```
 Resolved URL:  git+file:///home/runner/work/flake-nix-fmt/flake-nix-fmt?shallow=1
-Locked URL:    git+file:///home/runner/work/flake-nix-fmt/flake-nix-fmt?ref=refs/heads/main&rev=e3584da987f76a695f651fcc8c5ead095ce10d2c&shallow=1
+Locked URL:    git+file:///home/runner/work/flake-nix-fmt/flake-nix-fmt?ref=refs/heads/main&rev=35294fccaaa4e373985e4a666bcfb434d2124534&shallow=1
 Description:   Nix formatter & checks
-Path:          /nix/store/93w3d3zjl73q3zqn8ch5f0f4byncs4v0-source
-Revision:      e3584da987f76a695f651fcc8c5ead095ce10d2c
+Path:          /nix/store/bzvnsn57zirq057cjvv67jixkaka9r7l-source
+Revision:      35294fccaaa4e373985e4a666bcfb434d2124534
 Revisions:     1
-Last modified: 2025-04-24 11:25:13
-Fingerprint:   18b4ebbf613b9df4fc364b88368808c83c79380c9b46895285a39d63d9655c91
+Last modified: 2025-04-24 11:27:13
+Fingerprint:   7c4a53bd0470fb0d46c866ff5c54dc3219ddf4290eda320d8d038d257fb6be99
 Inputs:
 ├───flake-schemas: github:DeterminateSystems/flake-schemas/0a5c42297d870156d9c57d8f99e476b738dcd982?narHash=sha256-G5CxYeJVm4lcEtaO87LKzOsVnWeTcHGKbKxNamNWgOw%3D (2024-07-26 13:15:34)
 ├───flake-utils: github:numtide/flake-utils/04c1b180862888302ddfb2e3ad9eaa63afc60cf8?narHash=sha256-gzTw/v1vj4dOVbpBSJX4J0DwUR6LIyXo7/SuuTJp1kM%3D (2022-05-17 08:27:56)
@@ -22,7 +22,7 @@ Inputs:
 
 <details><summary>nix flake show</summary>
 ```
-git+file:///home/runner/work/flake-nix-fmt/flake-nix-fmt?ref=refs/heads/main&rev=e3584da987f76a695f651fcc8c5ead095ce10d2c&shallow=1
+git+file:///home/runner/work/flake-nix-fmt/flake-nix-fmt?ref=refs/heads/main&rev=35294fccaaa4e373985e4a666bcfb434d2124534&shallow=1
 ├───checks
 │   ├───aarch64-darwin
 │   │   └───fmt: derivation 'fmt'
