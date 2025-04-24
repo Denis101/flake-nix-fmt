@@ -9,8 +9,8 @@
 {% if tags is defined %}
 ## Releases
 
-{% for tag in tags | sort(reverse=True) %}- :label: `{{tag}}`{% if loop.index == 1 %} :sparkle:{% endif %}{% endfor %}
-{% endif %}
+{% for tag in tags | sort(reverse=True) %}- :label: `{{tag}}`{% if loop.index == 1 %} :sparkle:{% endif %}
+{% endfor %}{% endif %}
 ## Inputs
 
 {% for input_name in locks.nodes.keys() %}- :arrow_right: {{input_name}}{% endfor %}
@@ -21,21 +21,26 @@
 
 ### checks
 
-{% for check in checks.values() | first %}- :heavy_check_mark: {{check}}{% endfor %}
+{% for check in checks.values() | first %}- :heavy_check_mark: {{check}}
+{% endfor %}
 
 ### systems
-{% for system in checks.keys() %}- :computer: {{system}}{% endfor %}
+
+{% for system in checks.keys() %}- :computer: {{system}}
+{% endfor %}
 
 </details>{% endif %}{% if devShells is defined %}
 <details><summary>devShells</summary>
 
 ### devShells
 
-{% for devShell in devShells.values() | first %}- :pager: {{devShell}}{% endfor %}
+{% for devShell in devShells.values() | first %}- :pager: {{devShell}}
+{% endfor %}
 
 ### systems
 
-{% for system in devShells.keys() %}- :computer: {{system}}{% endfor %}
+{% for system in devShells.keys() %}- :computer: {{system}}
+{% endfor %}
 
 </details>
 {% endif %}{% if formatter is defined %}
@@ -47,6 +52,7 @@
 
 ### systems
 
-{% for system in formatter.keys() %}- :computer: {{system}}{% endfor %}
+{% for system in formatter.keys() %}- :computer: {{system}}
+{% endfor %}
 
 </details>{% endif %}
