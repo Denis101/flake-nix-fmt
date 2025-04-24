@@ -10,11 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: DeterminateSystems/nix-installer-action@v16
-      - uses: actions/setup-python@v2
-        with:
-          python-version: 3.x
       - run: |
-          pip3 install --user --upgrade j2cli
+          nix-shell -p jinja2-cli
           j2 -o README.md .github/workflows/README.md.j2 -D nix_flake_metadata=$(nix flake metadata) -D nix_flake_show=$(nix flake show --all-systems)
       - run: |
           git config user.name "Nix Bot"
