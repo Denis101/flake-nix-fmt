@@ -49,7 +49,7 @@
         };
 
         actions = pkgs.mkShellNoCC {
-          packages = with pkgs; [jinja2-cli];
+          packages = with pkgs; [j2cli];
         };
       };
     });
