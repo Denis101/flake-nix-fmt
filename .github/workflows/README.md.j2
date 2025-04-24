@@ -56,9 +56,7 @@
 
 ### formatters
 
-{% for formatter in formatter.values() | first %}
-- :pager: {{formatter.name}}
-{% endfor %}
+- :pager: {{(formatter.values() | first).name}}
 
 ### systems
 
