@@ -6,6 +6,14 @@
 - :watch: Last updated at {{lastModified | ctime}}
 - :hash: `{{locked.narHash}}`
 
+{% if tags is defined %}
+## Releases
+
+{% for tag in tags | sort(reverse=True) %}
+- :label: `{{tag}}`{% if loop.index == 1 %} :sparkle:{% endif %}
+{% endfor %}
+{% endif %}
+
 ## Inputs
 
 {% for input_name in locks.nodes.keys() %}
