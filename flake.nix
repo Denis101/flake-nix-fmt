@@ -18,7 +18,7 @@
       type = "github";
       owner = "NixOS";
       repo = "nixpkgs";
-      ref = "24.11";
+      ref = "refs/heads/nixpkgs-unstable";
     };
   };
 
