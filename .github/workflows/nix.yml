@@ -15,7 +15,7 @@ jobs:
           nix flake metadata | tee >(sed -r 's/\x1b\[[0-9;]*m//g' > .github/workflows/metadata.out)
           nix flake show --all-systems | tee >(sed -r 's/\x1b\[[0-9;]*m//g' > .github/workflows/show.out)
           nix develop .#actions --command jsonnet .github/workflows/flake.jsonnet > .github/workflows/data.json
-          nix develop .#actions --command j2 -o README.md .github/workflows/README.md.j2 -D .github/workflows/data.json
+          nix develop .#actions --command j2 -o README.md .github/workflows/README.md.j2 .github/workflows/data.json
       - name: commit changes
         run: |
           git config user.name "Nix Bot"
