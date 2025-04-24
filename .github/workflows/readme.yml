@@ -28,6 +28,6 @@ jobs:
           git commit -m "[nix] Update README.md"
           git push -u origin "${GITHUB_WORKFLOW}-${GITHUB_JOB}-${GITHUB_REF_TYPE}-${GITHUB_RUN_NUMBER}"
       - name: create pull request
-        run: gh pr create -l actions -l bot -t "[readme/nix] Update README.md"
+        run: gh pr create -l actions -l bot --title "[readme/nix] Update README.md" --body "[bot] [readme/nix] Update README.md"
         env:
           GH_TOKEN: ${{ github.token }}
