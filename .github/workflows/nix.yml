@@ -25,6 +25,8 @@ jobs:
           git commit -m "[nix] Update README.md"
           git push -u origin nix-update-readme-$GITHUB_RUN_NUMBER
       - run: gh pr create -f -l actions -l bot
+        env:
+          GH_TOKEN: ${{ github.token }}
   check:
     runs-on: ubuntu-latest
     steps:
