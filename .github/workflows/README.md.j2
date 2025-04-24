@@ -13,7 +13,8 @@
 {% endfor %}{% endif %}
 ## Inputs
 
-{% for input_name in locks.nodes.keys() %}- :arrow_right: {{input_name}}{% endfor %}
+{% for input_name in locks.nodes.keys() %}- :arrow_right: {{input_name}}
+{% endfor %}
 
 ## Outputs
 {% if checks is defined %}
