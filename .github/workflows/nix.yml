@@ -18,6 +18,13 @@ jobs:
           variables: |
             nix_flake_metadata=$(nix flake metadata)
             nix_flake_show=$(nix flake show --all-systems)
+      - run: |
+          git config user.name "Nix Bot"
+          git checkout -b nix-update-readme-$GITHUB_RUN_NUMBER
+          git add README.md
+          git commit -m "[nix] Update README.md"
+          git push
+      - run: gh pr create -f -l actions -l bot
   check:
     runs-on: ubuntu-latest
     steps:
