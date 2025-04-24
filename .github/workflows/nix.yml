@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: DeterminateSystems/nix-installer-action@v16
+      - uses: DeterminateSystems/nix-installer-action@v17
       - name: write README.md
         run: |
           nix develop .#githubActions echo "$(nix flake metadata --quiet --json) $(nix flake show --all-systems --quiet --json)" | jq -s add > .github/workflows/data.json
@@ -30,6 +30,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: DeterminateSystems/nix-installer-action@v16
+      - uses: DeterminateSystems/nix-installer-action@v17
       - uses: DeterminateSystems/flake-checker-action@v9
       - run: nix flake check --all-systems
