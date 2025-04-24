@@ -10,20 +10,23 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: DeterminateSystems/nix-installer-action@v16
-      - run: |
-          nix develop .#actions
+      - name: write README.md
+        run: |
           nix flake metadata | tee >(sed -r 's/\x1b\[[0-9;]*m//g' > .github/workflows/metadata.out)
           nix flake show --all-systems | tee >(sed -r 's/\x1b\[[0-9;]*m//g' > .github/workflows/show.out)
+          nix develop .#actions
           jsonnet .github/workflows/flake.jsonnet > .github/workflows/data.json
           j2 -o README.md .github/workflows/README.md.j2 -D .github/workflows/data.json
-      - run: |
+      - name: commit changes
+        run: |
           git config user.name "Nix Bot"
           git config user.email "<>"
           git checkout -b nix-update-readme-$GITHUB_RUN_NUMBER
           git add README.md
           git commit -m "[nix] Update README.md"
           git push -u origin nix-update-readme-$GITHUB_RUN_NUMBER
-      - run: gh pr create -f -l actions -l bot
+      - name: create pull request
+        run: gh pr create -f -l actions -l bot
         env:
           GH_TOKEN: ${{ github.token }}
   check:
