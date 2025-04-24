@@ -3,12 +3,12 @@
 ![check actions](https://github.com/denis101/flake-nix-fmt/actions/workflows/check.yml/badge.svg)
 
 - :page_with_curl: Nix formatter & checks
-- :watch: Last updated at Thu Apr 24 14:41:02 2025
-- :hash: `sha256-jLuDSm6AEt/rzqZMf37Yy4yIWPrQYVc9dSYQtreDfHE=`
+- :watch: Last updated at Thu Apr 24 14:47:55 2025
+- :hash: `sha256-/wwezRSUZEc2kR43WUixlnyxAm1SbVML2LfqXJaXHGs=`
 
 ## Releases
 
-- :label: `0.0.8` :sparkle:- :label: `0.0.7`- :label: `0.0.6`- :label: `0.0.5`- :label: `0.0.4`- :label: `0.0.3`- :label: `0.0.2`- :label: `0.0.1`
+- :label: `0.0.9` :sparkle: - :label: `0.0.8` - :label: `0.0.7` - :label: `0.0.6` - :label: `0.0.5` - :label: `0.0.4` - :label: `0.0.3` - :label: `0.0.2` - :label: `0.0.1` 
 ## Inputs
 
 - :arrow_right: flake-schemas
