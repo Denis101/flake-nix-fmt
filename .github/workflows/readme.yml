@@ -22,10 +22,10 @@ jobs:
         run: |
           git config user.name "Nix Bot"
           git config user.email "<>"
-          git checkout -b nix-update-readme-$GITHUB_RUN_NUMBER
+          git checkout -b $GITHUB_ACTOR-$GITHUB_ACTION-$GITHUB_EVENT_NAME-$GITHUB_RUN_NUMBER
           git add README.md
           git commit -m "[nix] Update README.md"
-          git push -u origin nix-update-readme-$GITHUB_RUN_NUMBER
+          git push -u origin $GITHUB_ACTOR-$GITHUB_ACTION-$GITHUB_EVENT_NAME-$GITHUB_RUN_NUMBER
       - name: create pull request
         run: gh pr create -f -l actions -l bot
         env:
