@@ -48,8 +48,8 @@
           packages = with pkgs; [alejandra];
         };
 
-        actions = pkgs.mkShellNoCC {
-          packages = with pkgs; [j2cli jsonnet];
+        githubActions = pkgs.mkShellNoCC {
+          packages = with pkgs; [j2cli];
         };
       };
     });

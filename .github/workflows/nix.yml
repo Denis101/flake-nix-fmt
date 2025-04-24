@@ -12,10 +12,8 @@ jobs:
       - uses: DeterminateSystems/nix-installer-action@v16
       - name: write README.md
         run: |
-          nix flake metadata | tee >(sed -r 's/\x1b\[[0-9;]*m//g' > .github/workflows/metadata.out)
-          nix flake show --all-systems | tee >(sed -r 's/\x1b\[[0-9;]*m//g' > .github/workflows/show.out)
-          nix develop .#actions --command jsonnet .github/workflows/flake.jsonnet > .github/workflows/data.json
-          nix develop .#actions --command j2 -o README.md .github/workflows/README.md.j2 .github/workflows/data.json
+          nix develop .#githubActions echo "$(nix flake metadata --quiet --json) $(nix flake show --all-systems --quiet --json)" | jq -s add > .github/workflows/data.json
+          nix develop .#githubActions --command j2 --customize .github/workflows/customize.py -o README.md .github/workflows/README.md.j2 .github/workflows/data.json
       - name: commit changes
         run: |
           git config user.name "Nix Bot"
