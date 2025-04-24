@@ -12,6 +12,7 @@ jobs:
       - uses: DeterminateSystems/nix-installer-action@v17
       - name: write README.md
         run: |
+          git fetch <remote> 'refs/tags/*:refs/tags/*'
           nix develop .#githubActions --command echo \
             $(nix flake metadata --quiet --json) \
             $(nix flake show --all-systems --quiet --json) \
@@ -27,6 +28,6 @@ jobs:
           git commit -m "[nix] Update README.md"
           git push -u origin "${GITHUB_WORKFLOW}-${GITHUB_JOB}-${GITHUB_REF_TYPE}-${GITHUB_RUN_NUMBER}"
       - name: create pull request
-        run: gh pr create -f -l actions -l bot
+        run: gh pr create -l actions -l bot -t "[readme/nix] Update README.md"
         env:
           GH_TOKEN: ${{ github.token }}
