@@ -2,14 +2,21 @@
 
 ![nix actions](https://github.com/denis101/flake-nix-fmt/actions/workflows/nix.yml/badge.svg)
 
-{% if nix_flake_metadata is defined %}
+{%if nix_flake_metadata is defined %}
+{% set metadata_list = nix_flake_metadata.split('\n')%}
 <details><summary>nix flake metadata</summary>
-{{nix_flake_metadata}}
+```
+{% for line in metadata_list %}{{line}}{% endfor %}
+```
 </details>
 {% endif %}
 
+
 {%if nix_flake_show is defined %}
+{% set show_list = nix_flake_show.split('\n')%}
 <details><summary>nix flake show</summary>
-{{nix_flake_show}}
+```
+{% for line in show_list %}{{line}}{% endfor %}
+```
 </details>
 {% endif %}
