@@ -43,7 +43,7 @@
       },
       "original": {
         "owner": "NixOS",
-        "ref": "refs/heads/nixpkgs-unstable",
+        "ref": "nixpkgs-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }

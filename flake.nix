@@ -14,12 +14,7 @@
       repo = "flake-utils";
       ref = "refs/tags/v1.0.0";
     };
-    nixpkgs = {
-      type = "github";
-      owner = "NixOS";
-      repo = "nixpkgs";
-      ref = "refs/heads/nixpkgs-unstable";
-    };
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
   };
 
   outputs = {
