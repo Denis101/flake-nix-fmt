@@ -12,7 +12,6 @@
       type = "github";
       owner = "numtide";
       repo = "flake-utils";
-      ref = "refs/tags/v1.0.0";
     };
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
   };
